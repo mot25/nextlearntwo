@@ -6,15 +6,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "mock": "json-server -w db.json -p 4200",
+    "devandserver": "concurrently \"npm run dev\" \" npm run mock\" "
   },
   "dependencies": {
+    "concurrently": "^7.0.0",
     "next": "12.1.2",
+    "nextjs-progressbar": "^0.0.14",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sass": "^1.49.9"
   },
   "devDependencies": {
+    "@types/node": "^17.0.23",
+    "@types/react": "^17.0.43",
     "eslint": "8.12.0",
-    "eslint-config-next": "12.1.2"
+    "eslint-config-next": "12.1.2",
+    "typescript": "^4.6.3"
   }
 }
